@@ -1,7 +1,7 @@
-# Basic Project
-## Basic Project Structure
+# Pet Registration Project
+## Basic java project
 
-Default Structure for A Basic Project
+The objective of this exercise is to create an application which registers a user and their number of pets into the system. Display the price of registering the pets for the number of year to the user and exit the system.
 
 *Java 7*
 
