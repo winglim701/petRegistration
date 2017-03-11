@@ -10,6 +10,8 @@
 
 package com.sqa.wc;
 
+import com.sqa.wc.helpers.*;
+
 /**
  * BasicApp //ADDD (description of class)
  * <p>
@@ -30,12 +32,30 @@ public class BasicApp {
 	 * @param args
 	 *            supplied arguments to main method
 	 */
+
+	static String appName = "Pet Registration";
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.print("┏(-_-)┛");
-		System.out.print("┗(-_-)┓");
-		System.out.print("┗(-_-)┛");
-		System.out.print("┏(-_-)┓");
+		String user = AppBasics.welcomeUserAndName(appName);
+		registerPets();
+		AppBasics.farewellUser(appName, user);
+
+	}
+
+	/**
+	 *
+	 */
+	private static void registerPets() {
+		int i = 0;
+		float priceOfRegistration = 45;
+		float costToRegister = 0;
+		int numOfPets = AppBasics.requestInt("How many pets do you want to register?");
+		while (i < numOfPets) {
+			int yearsToRegister = AppBasics.requestInt("How many years to register the pet # " + (i + 1) + "?");
+			costToRegister += yearsToRegister * priceOfRegistration;
+			i++;
+		}
+		System.out.println("Total price to register the pets is $" + costToRegister + ".");
 
 	}
 
