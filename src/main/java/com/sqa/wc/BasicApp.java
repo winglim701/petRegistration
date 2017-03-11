@@ -43,7 +43,7 @@ public class BasicApp {
 	}
 
 	/**
-	 *
+	 * Pet registration app
 	 */
 	private static void registerPets() {
 		int i = 0;
